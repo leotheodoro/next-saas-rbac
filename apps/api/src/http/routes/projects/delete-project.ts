@@ -18,7 +18,7 @@ export async function deleteProject(app: FastifyInstance) {
       '/organization/:slug/project/:projectId',
       {
         schema: {
-          tags: ['project'],
+          tags: ['projects'],
           summary: 'Delete a project',
           security: [{ bearerAuth: [] }],
           params: z.object({
