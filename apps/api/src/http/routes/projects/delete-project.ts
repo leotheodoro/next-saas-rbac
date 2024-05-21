@@ -15,10 +15,10 @@ export async function deleteProject(app: FastifyInstance) {
     .withTypeProvider<ZodTypeProvider>()
     .register(auth)
     .delete(
-      '/organization/:slug/project/:projectId',
+      '/organization/:slug/projects/:projectId',
       {
         schema: {
-          tags: ['projects'],
+          tags: ['project'],
           summary: 'Delete a project',
           security: [{ bearerAuth: [] }],
           params: z.object({
