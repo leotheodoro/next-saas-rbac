@@ -12,10 +12,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "npm@10.2.4",
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "config/*"
-  ]
+  "packageManager": "pnpm@9.0.6"
 }
