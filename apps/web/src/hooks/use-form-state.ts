@@ -1,3 +1,5 @@
+'use client'
+
 import { type FormEvent, useState, useTransition } from 'react'
 
 interface FormState {
@@ -8,7 +10,7 @@ interface FormState {
 
 export function useFormState(
   action: (data: FormData) => Promise<FormState>,
-  onSuccess: () => Promise<void> | void,
+  onSuccess?: () => Promise<void> | void,
   initialState?: FormState,
 ) {
   const [isPending, startTranstion] = useTransition()
